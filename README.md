@@ -8,7 +8,7 @@
    - [🔓 Exploitation des Ports SMB](#31-exploitation-des-ports-smb)  
 4. [🎯 Exploitation et Accès à la Machine](#-4-exploitation-et-accès-à-la-machine)  
    - [🖥️ Mise en place d'un Web Shell](#41-mise-en-place-dun-web-shell)  
-5. [⚡ Élévation de Privilèges](#-5-élévation-de-privilèges)  
+5. [⚡ Élévation de Privilèges](#5-élévation-de-privilèges)  
    - [📊 Analyse avec Linpeas](#51-analyse-avec-linpeas)  
    - [🔑 Utilisation de ums2net pour l'élévation de privilèges](#52-utilisation-de-ums2net-pour-lélévation-de-privilèges)  
    - [📌 Exploitation via ums2net](#53-exploitation-via-ums2net)  
