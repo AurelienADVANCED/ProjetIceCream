@@ -27,6 +27,14 @@ Identifier et exploiter les failles de sécurité de la machine cible **"Icecrea
 - **IP Cible :** 192.168.188.214  
 - **IP Kali :** 192.168.188.128  
 
+
+### 🖼️ Schéma de l’Infrastructure
+Un aperçu de l’infrastructure actuelle est illustré ci-dessous :
+
+![image](https://github.com/user-attachments/assets/a45d8c10-5f00-4661-b4be-307b155ae1dd)
+
+---
+
 Après avoir installé **Icecream** et testé la communication entre les machines, nous pouvons commencer le pentest.
 
 ![image6](https://github.com/user-attachments/assets/9ace5f64-811d-46d2-91d4-72febc164dd2)
