@@ -61,8 +61,8 @@ Connexion au partage **"icecream"** :
 smbclient //192.168.188.214/icecream -N  
 ```
 
-![image1](https://github.com/user-attachments/assets/b5c39a4a-6de5-40d2-bf67-71b3fcb81223)
 ![image9](https://github.com/user-attachments/assets/f50dd2e9-d504-4395-a02a-986c214d73b1)
+![image1](https://github.com/user-attachments/assets/b5c39a4a-6de5-40d2-bf67-71b3fcb81223)
 
 📌 **Constat :**  
 ✅ Accès en écriture confirmé.  
