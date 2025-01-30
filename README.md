@@ -11,7 +11,7 @@
 5. [⚡ Élévation de Privilèges](#5-élévation-de-privilèges)  
    - [📊 Analyse avec Linpeas](#51-analyse-avec-linpeas)  
    - [🔑 Utilisation de ums2net pour l'élévation de privilèges](#-53-utilisation-de-ums2net-pour-lélévation-de-privilèges)  
-   - [📌 Exploitation via ums2net](#53-exploitation-via-ums2net)  
+   - [📌 Exploitation via ums2net](#-53-exploitation-via-ums2net)  
 6. [🛡️ Recommandations de Sécurité](#-6-recommandations-de-sécurité)  
 7. [🔚 Conclusion](#-7-conclusion)  
 
