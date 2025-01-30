@@ -1,4 +1,4 @@
-  # 📌 Rapport de Vulnérabilité : Icecream
+# 📌 Rapport de Vulnérabilité : Icecream
 
 ## 📖 Sommaire  
 1. [📝 Introduction](#-1-introduction)  
@@ -24,8 +24,8 @@
 Identifier et exploiter les failles de sécurité de la machine cible **"Icecream"**.
 
 ### Informations sur les IP  
-- **IP Cible :** 192.168.188.214  
-- **IP Kali :** 192.168.188.128  
+**IP Cible :** 192.168.188.214  
+**IP Kali :** 192.168.188.128  
 
 
 ### 🖼️ Schéma de l’Infrastructure
@@ -140,10 +140,10 @@ Nous passons maintenant en **shell interactif** à l’aide de la commande :
 Nous allons tester les identifiants en utilisant **Linpeas**, un script qui analyse automatiquement le système pour détecter des vulnérabilités d’élévation de privilèges.  
 
 📌 **Linpeas** permet de trouver :  
-- **Des fichiers avec des permissions spéciales**  
-- **Des mots de passe cachés**  
-- **Des tâches cron vulnérables**  
-- **Des services mal configurés pouvant mener à une escalade de privilèges**  
+Des fichiers avec des permissions spéciales  
+Des mots de passe cachés  
+Des tâches cron vulnérables  
+Des services mal configurés pouvant mener à une escalade de privilèges
 
 C’est un outil très efficace pour automatiser la **découverte de vulnérabilités** après l’obtention d’un premier accès sur une machine Linux.  
 
@@ -250,16 +250,16 @@ Modifier le fichier `/etc/sudoers` pour supprimer **NOPASSWD** des commandes sen
 ```
 
 ### 6.3. Mise à Jour et Patch du Système  
-- Désinstaller ou mettre à jour **ums2net**.
-- Vérifier les services SMB et SSH pour éviter les accès non autorisés.
+Désinstaller ou mettre à jour **ums2net**.  
+Vérifier les services SMB et SSH pour éviter les accès non autorisés.
 
 ## 7. Conclusion  
 Nous avons réussi à :  
-1. **Accéder au partage SMB** et identifier des fichiers exploitables.  
-2. **Déployer un Web Shell** pour obtenir un accès shell distant.  
-3. **Élever nos privilèges à root** en exploitant **ums2net**.
+Accéder au partage SMB et identifier des fichiers exploitables.  
+Déployer un Web Shell pour obtenir un accès shell distant.  
+Élever nos privilèges à root en exploitant **ums2net**.
 
 📌 **Actions correctives impératives** :  
-- **Désactiver ou patcher ums2net**.  
-- **Appliquer des restrictions sur SMB et SSH**.  
-- **Surveiller les logs système pour détecter toute activité suspecte**.
+Désactiver ou patcher ums2net.  
+Appliquer des restrictions sur SMB et SSH.  
+Surveiller les logs système pour détecter toute activité suspecte.
