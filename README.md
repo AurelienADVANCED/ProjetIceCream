@@ -2,8 +2,8 @@
 ## 📖 Sommaire  
 1. [📝 Introduction](#-1-introduction)  
 2. [🔍 Découverte et Analyse Initiale des Services](#2-d%C3%A9couverte-et-analyse-initiale-des-services)  
-   - [📡 Scan Nmap](#-21-scan-nmap)  
-   - [🛠 Analyse des services ouverts](#-22-analyse-des-services-ouverts)  
+   - [📡 Scan Nmap](#21-scan-nmap)  
+   - [🛠 Analyse des services ouverts](#22-analyse-des-services-ouverts)  
 3. [🚀 Potentielles Pistes d'Exploitation](#-3-potentielles-pistes-dexploitation)  
    - [🔓 Exploitation des Ports SMB](#-31-exploitation-des-ports-smb)  
 4. [🎯 Exploitation et Accès à la Machine](#-4-exploitation-et-accès-à-la-machine)  
