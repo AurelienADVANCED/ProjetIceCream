@@ -254,8 +254,7 @@ Désinstaller ou mettre à jour **ums2net**.
 Vérifier les services SMB et SSH pour éviter les accès non autorisés.
 
 ## 🔚 7. Conclusion
-Nous avons réussi à :  
-Accéder au partage SMB et identifier des fichiers exploitables.  
+Nous avons réussi à accéder au partage SMB et identifier des fichiers exploitables.  
 Déployer un Web Shell pour obtenir un accès shell distant.  
 Élever nos privilèges à root en exploitant **ums2net**.
 
