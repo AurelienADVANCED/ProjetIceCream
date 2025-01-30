@@ -91,6 +91,8 @@ Exécution de commandes :
 curl "http://192.168.188.214/shell.php?cmd=id"  
 ```
 
+![image21](https://github.com/user-attachments/assets/e3582859-8fa2-40bf-a03a-a15324c71a66)
+
 ## 5. Élévation de Privilèges
 
 ### 5.1. Analyse avec Linpeas et PSPY  
