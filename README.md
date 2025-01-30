@@ -242,7 +242,7 @@ sudo /usr/sbin/ums2net -c /tmp/config -d
 Modifier le fichier `/etc/sudoers` pour supprimer **NOPASSWD** des commandes sensibles.
 
 ### 6.2. Sécurisation des Fichiers de Configuration  
-- Restreindre les permissions de `/etc/passwd` :  
+Restreindre les permissions de `/etc/passwd` :  
 ```bash
   chmod 644 /etc/passwd  
 ```
