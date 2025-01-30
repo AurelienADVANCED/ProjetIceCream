@@ -236,7 +236,7 @@ sudo /usr/sbin/ums2net -c /tmp/config -d
 
 ✅ **Accès root obtenu** via l’utilisateur **"aurelien"**.
 
-## 6. Recommandations de Sécurité pour Corriger la Vulnérabilité ums2net
+##🛡️ 6. Recommandations de Sécurité pour Corriger la Vulnérabilité ums2net
 
 ### 6.1. Révision des Permissions de Sudo  
 Modifier le fichier `/etc/sudoers` pour supprimer **NOPASSWD** des commandes sensibles.
