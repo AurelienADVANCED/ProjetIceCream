@@ -253,7 +253,7 @@ Empêcher **ums2net** d’être exécuté en tant que root.
 Désinstaller ou mettre à jour **ums2net**.  
 Vérifier les services SMB et SSH pour éviter les accès non autorisés.
 
-## 7. Conclusion  
+## 🔚 7. Conclusion
 Nous avons réussi à :  
 Accéder au partage SMB et identifier des fichiers exploitables.  
 Déployer un Web Shell pour obtenir un accès shell distant.  
