@@ -246,8 +246,8 @@ Modifier le fichier `/etc/sudoers` pour supprimer **NOPASSWD** des commandes sen
 - Restreindre les permissions de `/etc/passwd` :  
 ```bash
   chmod 644 /etc/passwd  
-- Empêcher **ums2net** d’être exécuté en tant que root.
 ```
+Empêcher **ums2net** d’être exécuté en tant que root.
 
 ### 6.3. Mise à Jour et Patch du Système  
 Désinstaller ou mettre à jour **ums2net**.  
