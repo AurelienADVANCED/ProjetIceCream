@@ -1,4 +1,4 @@
-# 📌 Rapport de Vulnérabilité : Icecream
+  # 📌 Rapport de Vulnérabilité : Icecream
 
 ## 1. Introduction
 
@@ -24,6 +24,9 @@ Définition de la variable IP cible et exécution d’un scan complet des ports,
 target=192.168.188.214  
 nmap -T4 -p$(nmap -Pn -T4 -n -p- $target | grep 'tcp.*open' | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//) -Pn -n -sVC $target
 ```
+![image22](https://github.com/user-attachments/assets/e734ee50-4961-4aca-9e03-bc7c6898ce2c)
+![image17](https://github.com/user-attachments/assets/503917ee-c35a-4a19-8e35-8cdc01de8788)
+
 
 ### 2.2. Analyse des services ouverts  
 
@@ -41,6 +44,8 @@ nmap -T4 -p$(nmap -Pn -T4 -n -p- $target | grep 'tcp.*open' | cut -d '/' -f 1 | 
 Analyse des vulnérabilités potentielles des ports **139** & **445** (Samba 4.6.2).  
 Après consultation de **SearchSploit** et **CVE Details**, aucune faille exploitable récente n'a été identifiée.
 
+![image10](https://github.com/user-attachments/assets/42d9558e-304b-4ecb-b066-57725a8cab04)
+
 #### Tests de connexion SMB  
 Utilisation de `smbclient` pour tester l'accès aux partages.
 
@@ -48,11 +53,16 @@ Utilisation de `smbclient` pour tester l'accès aux partages.
 smbclient -L //192.168.188.214 -N  
 ```
 
+![image16](https://github.com/user-attachments/assets/c8d78cbc-5a76-46fb-83a8-afb3c3c30e1d)
+
 Connexion au partage **"icecream"** :  
 
 ```bash
 smbclient //192.168.188.214/icecream -N  
 ```
+
+![image1](https://github.com/user-attachments/assets/b5c39a4a-6de5-40d2-bf67-71b3fcb81223)
+![image9](https://github.com/user-attachments/assets/f50dd2e9-d504-4395-a02a-986c214d73b1)
 
 📌 **Constat :**  
 ✅ Accès en écriture confirmé.  
